@@ -1,0 +1,43 @@
+Introduction to Java FX
+Java Fx is a GUI library for building GUI apps.
+
+Prerequisite
+Java compiler
+Java programming
+Install JavaFX SDK
+Install IntelliJ
+
+Stages
+This is the window that hold the components for our app.
+The stage is a top level window on top of which we put Scenes.
+Scene holds controls and these are buttons and labels, etc.
+
+Our Main Application will extend the Application interface of
+javafx.application.Application where we have to implement the
+start method and also call the launch method in the main method
+passing in args.
+
+// Create a button
+Button button = new Button("I am a button Clicked me");
+
+// Create a layout and add the button to the layout
+HBox  hBox = new HBox();
+hBox.getChildren().add(button);
+
+// Create  a scene and add the layout and bg
+Scene scene = new Scene(hBox, Color.TOMATO);
+
+// set the stage by adding a scene
+stage.setScene(scene);
+
+// set title
+stage.setTitle("This is a Title");
+
+// set the icon of the window and add it to the stage
+/*Image icon = new Image("icon.jpg");
+System.out.println(icon.getUrl());
+
+stage.getIcons().add(icon);*/
+
+// display/show the scene
+stage.show();
